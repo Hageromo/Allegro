@@ -29,18 +29,9 @@ public class MainController {
     public List<GitHubEntity> getRepos(@PathVariable String user){
 
         ObjectMapper mapper = new ObjectMapper();
-        List<GitHubEntity> repos = mapper.convertValue(parsingService.parse(getGitHubApi(user)), new TypeReference<List<GitHubEntity>>() {});
+        List<GitHubEntity> repos = mapper.convertValue(parsingService.parse(getGitHubApi(user)), new TypeReference<>() {});
 
-        List<GitHubEntity> repositoryDetails = new ArrayList<>();
-        for(int i =0; i< repos.size(); i++){
-            GitHubEntity entity = new GitHubEntity();
-            entity.setName(repos.get(i).getName());
-            entity.setLanguage(repos.get(i).getLanguage());
-            entity.setStargazers_count(repos.get(i).getStargazers_count());
-            entity.setSize(repos.get(i).getSize());
-            repositoryDetails.add(i, entity);
-        }
-        return repositoryDetails;
+        return repos;
     }
 
 

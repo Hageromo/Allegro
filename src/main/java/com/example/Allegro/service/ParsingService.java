@@ -1,6 +1,9 @@
 package com.example.Allegro.service;
 
+import java.util.List;
+
 public interface ParsingService {
 
-    Object parse(String url);
+    <T> List<T> parse(String url);
+
 }
