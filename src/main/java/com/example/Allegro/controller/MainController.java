@@ -1,9 +1,9 @@
 package com.example.Allegro.controller;
 
-import com.example.Allegro.model.GitHubEntity;
-import com.example.Allegro.model.GitHubLanguage;
-import com.example.Allegro.model.GitHubStars;
-import com.example.Allegro.service.ParsingService;
+import com.example.Allegro.domain.model.GitHubEntity;
+import com.example.Allegro.domain.model.GitHubLanguage;
+import com.example.Allegro.domain.model.GitHubStars;
+import com.example.Allegro.domain.ParsingService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ListMultimap;

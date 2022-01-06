@@ -1,4 +1,4 @@
-package com.example.Allegro.model;
+package com.example.Allegro.domain.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -13,9 +13,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class GitHubStars {
+public class GitHubLanguage {
 
-    @JsonProperty("stargazers_count")
-    private Integer stargazers_count;
+    @JsonProperty("language")
+    private String language;
 
+
+    @JsonProperty("number_of_repositories")
+    private Integer number_of_repositories;
+
+    @JsonProperty("size")
+    private Integer size;
 }

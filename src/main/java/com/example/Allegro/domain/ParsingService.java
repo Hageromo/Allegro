@@ -1,4 +1,4 @@
-package com.example.Allegro.service;
+package com.example.Allegro.domain;
 
 import java.util.List;
 
