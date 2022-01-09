@@ -28,7 +28,6 @@ public class MainController {
         return collect;
     }
 
-
     @GetMapping("/{user}/stars")
     public UserStarsDto getStars(@PathVariable String user) {
         UserName userName = new UserName(user);
