@@ -14,7 +14,7 @@
 	<name>Allegro</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>15</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -70,6 +70,36 @@
             <artifactId>guava</artifactId>
             <version>31.0.1-jre</version>
         </dependency>
+        <dependency>
+            <groupId>net.thauvin.erik.httpstatus</groupId>
+            <artifactId>httpstatus</artifactId>
+            <version>1.0.5</version>
+            <scope>compile</scope>
+        </dependency>
+		<dependency>
+			<groupId>br.com.anteros</groupId>
+			<artifactId>Anteros-IOT</artifactId>
+			<version>1.0.16</version>
+			<scope>compile</scope>
+		</dependency>
+        <dependency>
+            <groupId>io.github.ricall.junit5-wiremock</groupId>
+            <artifactId>junit5-wiremock</artifactId>
+            <version>2.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+		<dependency>
+			<groupId>com.epages</groupId>
+			<artifactId>wiremock-spring-boot-starter</artifactId>
+			<version>0.8.0</version>
+			<scope>compile</scope>
+		</dependency>
+        <dependency>
+            <groupId>com.github.ivanovvlad9626</groupId>
+            <artifactId>TestRail-RestAssured</artifactId>
+            <version>0.5</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 	<build>
@@ -84,6 +114,14 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>16</source>
+					<target>16</target>
 				</configuration>
 			</plugin>
 		</plugins>
